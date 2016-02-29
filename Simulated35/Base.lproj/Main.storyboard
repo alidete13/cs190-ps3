@@ -22,9 +22,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-3Y-bB7" customClass="DisplayView" customModule="Simulated35" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="560" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tao-YQ-eVK">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="68"/>
+                                        <state key="normal" title="GO GAELS!!!!"/>
+                                        <connections>
+                                            <segue destination="cJP-Vc-QBF" kind="presentation" id="wqM-dk-GAM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ey4-3Y-bB7" secondAttribute="height" multiplier="165:20" id="01X-2i-mlH"/>
+                                    <constraint firstItem="Tao-YQ-eVK" firstAttribute="width" secondItem="ey4-3Y-bB7" secondAttribute="width" id="6sj-fl-5Sx"/>
+                                    <constraint firstItem="Tao-YQ-eVK" firstAttribute="top" secondItem="ey4-3Y-bB7" secondAttribute="top" id="BBd-zx-ctj"/>
+                                    <constraint firstItem="Tao-YQ-eVK" firstAttribute="leading" secondItem="ey4-3Y-bB7" secondAttribute="leading" id="aZG-8Y-4zQ"/>
+                                    <constraint firstItem="Tao-YQ-eVK" firstAttribute="height" secondItem="ey4-3Y-bB7" secondAttribute="height" id="fUp-A4-ILx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJh-j0-Y6h" userLabel="S b4 x^y">
@@ -459,7 +472,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="676"/>
+            <point key="canvasLocation" x="975" y="1224"/>
+        </scene>
+        <!--Gaels View Controller-->
+        <scene sceneID="y9B-a9-tpk">
+            <objects>
+                <viewController id="cJP-Vc-QBF" customClass="GaelsViewController" customModule="Simulated35" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v1F-tn-3qE"/>
+                        <viewControllerLayoutGuide type="bottom" id="kOL-nw-i9z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBj-TS-ZMc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaels_logo_944_625" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-Z5-YDe">
+                                <rect key="frame" x="0.0" y="79" width="600" height="397"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="454" id="TJd-Cj-yju"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="454" id="cnH-6B-e5o"/>
+                                    <constraint firstAttribute="width" secondItem="LZZ-Z5-YDe" secondAttribute="height" multiplier="944:625" id="qVr-kr-Jjd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TJd-Cj-yju"/>
+                                        <exclude reference="cnH-6B-e5o"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arY-CG-VV7">
+                                <rect key="frame" x="275" y="570" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="arY-CG-VV7" secondAttribute="height" multiplier="5:3" id="xqx-62-4VB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="uUs-GK-G2Y" kind="unwind" unwindAction="unwindAcknowledgements:" id="Q6i-9W-gwG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kOL-nw-i9z" firstAttribute="top" secondItem="arY-CG-VV7" secondAttribute="bottom" id="4aq-L3-3Uu"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="width" secondItem="oBj-TS-ZMc" secondAttribute="width" id="JQC-OL-7g8"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="centerX" secondItem="oBj-TS-ZMc" secondAttribute="centerX" id="MS6-9z-56R"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="width" secondItem="oBj-TS-ZMc" secondAttribute="width" multiplier="0.5" id="MqC-gI-EM1"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="top" secondItem="v1F-tn-3qE" secondAttribute="bottom" constant="59" id="TVY-4q-2N2"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="leading" secondItem="oBj-TS-ZMc" secondAttribute="leadingMargin" multiplier="0.5" constant="53" id="blS-Dd-ffh"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="centerX" secondItem="oBj-TS-ZMc" secondAttribute="centerX" multiplier="0.5" id="cQv-91-5e1"/>
+                            <constraint firstItem="arY-CG-VV7" firstAttribute="centerX" secondItem="oBj-TS-ZMc" secondAttribute="centerX" id="gvd-eb-bsM"/>
+                            <constraint firstItem="arY-CG-VV7" firstAttribute="centerY" secondItem="oBj-TS-ZMc" secondAttribute="centerY" id="jMp-PE-CbF"/>
+                            <constraint firstItem="arY-CG-VV7" firstAttribute="width" secondItem="oBj-TS-ZMc" secondAttribute="height" multiplier="23:300" id="ruW-LZ-4Kc"/>
+                            <constraint firstItem="LZZ-Z5-YDe" firstAttribute="height" secondItem="oBj-TS-ZMc" secondAttribute="height" multiplier="1:2" id="wzy-ak-XdI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MqC-gI-EM1"/>
+                                <exclude reference="blS-Dd-ffh"/>
+                                <exclude reference="cQv-91-5e1"/>
+                                <exclude reference="wzy-ak-XdI"/>
+                                <exclude reference="jMp-PE-CbF"/>
+                                <exclude reference="ruW-LZ-4Kc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df6-yw-Hl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uUs-GK-G2Y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gaels_logo_944_625" width="472" height="312"/>
+    </resources>
 </document>
